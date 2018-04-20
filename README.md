@@ -19,7 +19,9 @@ github "TheAbstractDev/NotchyAlert"
 ### Usage
 First, you'll need to import NotchyAlert
 
-`import NotchyAlert`
+```swift
+import NotchyAlert
+`
 
 #### Title Only
 
