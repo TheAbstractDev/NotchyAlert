@@ -45,3 +45,6 @@ notchy.presentNotchy(in: self.view, duration: 3)
 let notchy = Notchy(title: "Oops!", description: "No Internet Connection.", image: "<YOUR IMAGE>)
 notchy.presentNotchy(in: self.view, duration: 3)
 ```
+
+## Example
+You can test it by downloading the project.
