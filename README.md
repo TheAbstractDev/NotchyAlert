@@ -13,7 +13,7 @@ There's some examples
 To install NotchyAlert using [Carthage](https://github.com/Carthage/Carthage), add the following line to your Cartfile:
 
 ```
-github "HarshilShah/NotchyAlert"
+github "TheAbstractDev/NotchyAlert"
 ```
 
 ### Presentation
