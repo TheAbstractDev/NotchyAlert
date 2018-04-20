@@ -1,6 +1,6 @@
 language: objective-c
 osx_image: xcode9
-xcode_project: NotchyAlert.xcodeproj
+xcode_project: Notchy.xcodeproj
 xcode_scheme: NotchyAlert
 xcode_sdk: iphonesimulator11.0
 env:
@@ -15,8 +15,6 @@ before_deploy:
 - carthage archive $FRAMEWORK_NAME
 deploy:
   provider: releases
-  api_key:
-    secure: GCMfSOjXjiVyNwYNXCLx3NwAJ9AeP3wCq89XGbfKc9nMedsczHaKjRBYTkTqNhMUxuDKXtpax2nDClQziqxZsDtc73KRC/POxg4c/OFgNlCOAR4mmR2+dlnnsuHhBtipX7cypPDHxH6ZHlvFQU9adFQb8nbhaS+pel05krudypqJ6gtRHkBMo3IIKVHumHFppi+MFJR9o83ZDcQ9zspig9ZVQe8A6XpKx11x3TvEqMTV8ca/ef5vdPo+lDLfRLqjEM2zr5UpQAm3KFZf6mGXf6N77eoTvSS5cgUe4836NLIun9v7JPIojyBt8Ri2O9i24y4kVqK1D+DAPWAJ+Fe1pxvVjNZmzSogV7QdLb6m2BqzPsJRdyHJm9rDcOIl6/vUV8PStMGdCYQ4cMT7qvQ9bNPNZYbkTVBrVTbXq3ChwOW0QpFc1muFXYeOjLWveOXESzo4qOWXkHI3iay2A/r9NzFp8nkMOAJsLZRNe2NLL5A5gFYyNEYQ6/lPl9k20rQ1uI35mlSoxONVJDIfF7yUsr7wEs8jyaZATrVYrJJofGaTF7uuoxicM9aO4WoUlR6H4oXFfOtkrQdc4ZRVjT3HhFWFubDv9euHG5oJ5yPNqUzhGB26eGGZyjHvBODVpAwRXYj09NfqJgCZrMVVT0BESkkgkkEfCTxMLpM9RHyWTgI=
   file: ''
   on:
     repo: TheAbstractDev/NotchyAlert
