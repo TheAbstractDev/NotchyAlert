@@ -1,10 +1,10 @@
 # NotchyAlert
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-![notchySimple](notchySimple.gif)
-![notchyWithDescription](notchyWithDescription.gif)
-![notchyWithImage](notchyWithImage.gif)
-![notchyWithDescImage](notchyWithDescImage.gif)
+![notchySimple](Screenshots/notchySimple.gif)
+![notchyWithDescription](Screenshots/notchyWithDescription.gif)
+![notchyWithImage](Screenshots/notchyWithImage.gif)
+![notchyWithDescImage](Screenshots/notchyWithDescImage.gif)
 
 ## Installation
 
