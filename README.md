@@ -1,5 +1,5 @@
 # Notchy
-Use the iPhone X notch space in creative ways.
+There's some examples
 
 ![notchySimple](notchySimple.gif)
 ![notchyWithDescription](notchyWithDescription.gif)
