@@ -16,7 +16,10 @@ To install NotchyAlert using [Carthage](https://github.com/Carthage/Carthage), a
 github "TheAbstractDev/NotchyAlert"
 ```
 
-### Presentation
+### Usage
+First, you'll need to import NotchyAlert
+
+`import NotchyAlert`
 
 #### Title Only
 
