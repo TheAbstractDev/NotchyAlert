@@ -21,7 +21,7 @@ First, you'll need to import NotchyAlert
 
 ```swift
 import NotchyAlert
-`
+```
 
 #### Title Only
 
