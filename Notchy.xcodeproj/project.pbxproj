@@ -16,6 +16,7 @@
 		3063D8FD208A207C00A0DE99 /* NotchyAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 3063D8FB208A207C00A0DE99 /* NotchyAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3063D900208A207C00A0DE99 /* NotchyAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3063D8F9208A207C00A0DE99 /* NotchyAlert.framework */; };
 		3063D901208A207C00A0DE99 /* NotchyAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3063D8F9208A207C00A0DE99 /* NotchyAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30664C3E208A30A90086C6ED /* NotchyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063D8F0208A0FF100A0DE99 /* NotchyAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30664C3E208A30A90086C6ED /* NotchyAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +391,7 @@
 		3063D8E6208A0E3300A0DE99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7LJNLPVZKA;
@@ -411,6 +414,7 @@
 		3063D8E7208A0E3300A0DE99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7LJNLPVZKA;
