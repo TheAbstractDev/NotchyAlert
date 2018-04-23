@@ -99,63 +99,46 @@ public class NotchyAlert {
                         })
                     }
                 }
+            }
+            if description != nil && image == nil {
+                notchy.frame = CGRect(x: 80, y: -145, width: 217, height: 175)
+                titleLabel.center = notchy.center
+                View.addSubview(notchy)
+                View.addSubview(titleLabel)
                 
-                if description != nil && image == nil {
-                    notchy.frame = CGRect(x: 80, y: -145, width: 217, height: 175)
-                    titleLabel.center = notchy.center
-                    View.addSubview(notchy)
-                    View.addSubview(titleLabel)
-                    
-                    descriptionLabel.text = self.description
-                    descriptionLabel.sizeToFit()
-                    descriptionLabel.textColor = .white
-                    descriptionLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-                    descriptionLabel.center = notchy.center
-                    View.addSubview(descriptionLabel)
-                    feedbackGenerator(force: .light)
-                    
-                    if bounce != nil && bounce == true {
-                        UIView.animate(withDuration: 0.3, animations: {
-                            titleLabel.layer.position.y = 50
-                            descriptionLabel.layer.position.y = 70
-                            notchy.layer.position.y = 0
-                        }) { (success) in
+                descriptionLabel.text = self.description
+                descriptionLabel.sizeToFit()
+                descriptionLabel.textColor = .white
+                descriptionLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+                descriptionLabel.center = notchy.center
+                View.addSubview(descriptionLabel)
+                feedbackGenerator(force: .light)
+                
+                if bounce != nil && bounce == true {
+                    UIView.animate(withDuration: 0.3, animations: {
+                        titleLabel.layer.position.y = 50
+                        descriptionLabel.layer.position.y = 70
+                        notchy.layer.position.y = 0
+                    }) { (success) in
+                        UIView.animate(withDuration: 0.2, animations: {
+                            titleLabel.layer.position.y = 45
+                            descriptionLabel.layer.position.y = 65
+                            notchy.layer.position.y = -5
+                        })  { (success) in
                             UIView.animate(withDuration: 0.2, animations: {
-                                titleLabel.layer.position.y = 45
-                                descriptionLabel.layer.position.y = 65
-                                notchy.layer.position.y = -5
-                            })  { (success) in
-                                UIView.animate(withDuration: 0.2, animations: {
-                                    titleLabel.layer.position.y = 50
-                                    descriptionLabel.layer.position.y = 70
-                                    notchy.layer.position.y = 0
-                                })
-                            }
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
-                            UIView.animate(withDuration: 0.2, animations: {
-                                titleLabel.layer.position.y = 55
-                                descriptionLabel.layer.position.y = 75
-                                notchy.layer.position.y = 5
-                            }, completion: { (success) in
-                                UIView.animate(withDuration: 0.3, animations: {
-                                    titleLabel.layer.position.y = -145
-                                    notchy.layer.position.y = -145
-                                    descriptionLabel.layer.position.y = -145
-                                    titleLabel.removeFromSuperview()
-                                    notchy.removeFromSuperview()
-                                })
+                                titleLabel.layer.position.y = 50
+                                descriptionLabel.layer.position.y = 70
+                                notchy.layer.position.y = 0
                             })
                         }
-                    } else {
-                        UIView.animate(withDuration: 0.3, animations: {
-                            titleLabel.layer.position.y = 50
-                            descriptionLabel.layer.position.y = 70
-                            notchy.layer.position.y = 0
-                        })
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                        UIView.animate(withDuration: 0.2, animations: {
+                            titleLabel.layer.position.y = 55
+                            descriptionLabel.layer.position.y = 75
+                            notchy.layer.position.y = 5
+                        }, completion: { (success) in
                             UIView.animate(withDuration: 0.3, animations: {
                                 titleLabel.layer.position.y = -145
                                 notchy.layer.position.y = -145
@@ -163,65 +146,64 @@ public class NotchyAlert {
                                 titleLabel.removeFromSuperview()
                                 notchy.removeFromSuperview()
                             })
-                        }
+                        })
+                    }
+                } else {
+                    UIView.animate(withDuration: 0.3, animations: {
+                        titleLabel.layer.position.y = 50
+                        descriptionLabel.layer.position.y = 70
+                        notchy.layer.position.y = 0
+                    })
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                        UIView.animate(withDuration: 0.3, animations: {
+                            titleLabel.layer.position.y = -145
+                            notchy.layer.position.y = -145
+                            descriptionLabel.layer.position.y = -145
+                            titleLabel.removeFromSuperview()
+                            notchy.removeFromSuperview()
+                        })
                     }
                 }
+            }
+            
+            if description == nil && image != nil {
+                notchy.frame = CGRect(x: 80, y: -145, width: 217, height: 275)
+                titleLabel.center = notchy.center
+                View.addSubview(notchy)
+                View.addSubview(titleLabel)
                 
-                if description == nil && image != nil {
-                    notchy.frame = CGRect(x: 80, y: -145, width: 217, height: 275)
-                    titleLabel.center = notchy.center
-                    View.addSubview(notchy)
-                    View.addSubview(titleLabel)
-                    
-                    let imageView = UIImageView(image: self.image)
-                    imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-                    imageView.center = notchy.center
-                    View.addSubview(imageView)
-                    feedbackGenerator(force: .light)
-                    
-                    if bounce != nil && bounce == true {
-                        UIView.animate(withDuration: 0.3, animations: {
-                            notchy.layer.position.y = 0
-                            titleLabel.layer.position.y = 50
-                            imageView.layer.position.y = 95
-                        }) { (success) in
+                let imageView = UIImageView(image: self.image)
+                imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+                imageView.center = notchy.center
+                View.addSubview(imageView)
+                feedbackGenerator(force: .light)
+                
+                if bounce != nil && bounce == true {
+                    UIView.animate(withDuration: 0.3, animations: {
+                        notchy.layer.position.y = 0
+                        titleLabel.layer.position.y = 50
+                        imageView.layer.position.y = 95
+                    }) { (success) in
+                        UIView.animate(withDuration: 0.2, animations: {
+                            titleLabel.layer.position.y = 45
+                            imageView.layer.position.y = 90
+                            notchy.layer.position.y = -5
+                        })  { (success) in
                             UIView.animate(withDuration: 0.2, animations: {
-                                titleLabel.layer.position.y = 45
-                                imageView.layer.position.y = 90
-                                notchy.layer.position.y = -5
-                            })  { (success) in
-                                UIView.animate(withDuration: 0.2, animations: {
-                                    titleLabel.layer.position.y = 50
-                                    imageView.layer.position.y = 95
-                                    notchy.layer.position.y = 0
-                                })
-                            }
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
-                            UIView.animate(withDuration: 0.2, animations: {
-                                titleLabel.layer.position.y = 55
-                                notchy.layer.position.y = 5
-                                imageView.layer.position.y = 100
-                            }, completion: { (success) in
-                                UIView.animate(withDuration: 0.3, animations: {
-                                    titleLabel.layer.position.y = -145
-                                    imageView.layer.position.y = -145
-                                    notchy.layer.position.y = -145
-                                    titleLabel.removeFromSuperview()
-                                    notchy.removeFromSuperview()
-                                    imageView.removeFromSuperview()
-                                })
+                                titleLabel.layer.position.y = 50
+                                imageView.layer.position.y = 95
+                                notchy.layer.position.y = 0
                             })
                         }
-                    } else {
-                        UIView.animate(withDuration: 0.3, animations: {
-                            titleLabel.layer.position.y = 50
-                            imageView.layer.position.y = 95
-                            notchy.layer.position.y = 0
-                        })
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                        UIView.animate(withDuration: 0.2, animations: {
+                            titleLabel.layer.position.y = 55
+                            notchy.layer.position.y = 5
+                            imageView.layer.position.y = 100
+                        }, completion: { (success) in
                             UIView.animate(withDuration: 0.3, animations: {
                                 titleLabel.layer.position.y = -145
                                 imageView.layer.position.y = -145
@@ -230,79 +212,77 @@ public class NotchyAlert {
                                 notchy.removeFromSuperview()
                                 imageView.removeFromSuperview()
                             })
-                        }
+                        })
+                    }
+                } else {
+                    UIView.animate(withDuration: 0.3, animations: {
+                        titleLabel.layer.position.y = 50
+                        imageView.layer.position.y = 95
+                        notchy.layer.position.y = 0
+                    })
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                        UIView.animate(withDuration: 0.3, animations: {
+                            titleLabel.layer.position.y = -145
+                            imageView.layer.position.y = -145
+                            notchy.layer.position.y = -145
+                            titleLabel.removeFromSuperview()
+                            notchy.removeFromSuperview()
+                            imageView.removeFromSuperview()
+                        })
                     }
                 }
+            }
+            
+            if description != nil && image != nil {
+                notchy.frame = CGRect(x: 80, y: -145, width: 217, height: 300)
+                titleLabel.center = notchy.center
+                View.addSubview(notchy)
+                View.addSubview(titleLabel)
                 
-                if description != nil && image != nil {
-                    notchy.frame = CGRect(x: 80, y: -145, width: 217, height: 300)
-                    titleLabel.center = notchy.center
-                    View.addSubview(notchy)
-                    View.addSubview(titleLabel)
-                    
-                    descriptionLabel.text = self.description
-                    descriptionLabel.layer.position.y = -145
-                    descriptionLabel.sizeToFit()
-                    descriptionLabel.textColor = .white
-                    descriptionLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-                    descriptionLabel.center = notchy.center
-                    View.addSubview(descriptionLabel)
-                    
-                    let imageView = UIImageView(image: self.image)
-                    imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-                    imageView.center = notchy.center
-                    View.addSubview(imageView)
-                    feedbackGenerator(force: .light)
-                    
-                    if bounce != nil && bounce == true {
-                        UIView.animate(withDuration: 0.3, animations: {
-                            notchy.layer.position.y = 0
-                            titleLabel.layer.position.y = 50
-                            descriptionLabel.layer.position.y = 70
-                            imageView.layer.position.y = 113
-                        }) { (success) in
+                descriptionLabel.text = self.description
+                descriptionLabel.layer.position.y = -145
+                descriptionLabel.sizeToFit()
+                descriptionLabel.textColor = .white
+                descriptionLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+                descriptionLabel.center = notchy.center
+                View.addSubview(descriptionLabel)
+                
+                let imageView = UIImageView(image: self.image)
+                imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+                imageView.center = notchy.center
+                View.addSubview(imageView)
+                feedbackGenerator(force: .light)
+                
+                if bounce != nil && bounce == true {
+                    UIView.animate(withDuration: 0.3, animations: {
+                        notchy.layer.position.y = 0
+                        titleLabel.layer.position.y = 50
+                        descriptionLabel.layer.position.y = 70
+                        imageView.layer.position.y = 113
+                    }) { (success) in
+                        UIView.animate(withDuration: 0.2, animations: {
+                            titleLabel.layer.position.y = 45
+                            imageView.layer.position.y = 108
+                            descriptionLabel.layer.position.y = 65
+                            notchy.layer.position.y = -5
+                        })  { (success) in
                             UIView.animate(withDuration: 0.2, animations: {
-                                titleLabel.layer.position.y = 45
-                                imageView.layer.position.y = 108
-                                descriptionLabel.layer.position.y = 65
-                                notchy.layer.position.y = -5
-                            })  { (success) in
-                                UIView.animate(withDuration: 0.2, animations: {
-                                    titleLabel.layer.position.y = 50
-                                    imageView.layer.position.y = 113
-                                    descriptionLabel.layer.position.y = 70
-                                    notchy.layer.position.y = 0
-                                })
-                            }
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
-                            UIView.animate(withDuration: 0.2, animations: {
-                                titleLabel.layer.position.y = 55
-                                imageView.layer.position.y = 118
-                                descriptionLabel.layer.position.y = 75
-                                notchy.layer.position.y = 5
-                            }, completion: { (success) in
-                                UIView.animate(withDuration: 0.3, animations: {
-                                    titleLabel.layer.position.y = -145
-                                    descriptionLabel.layer.position.y = -145
-                                    imageView.layer.position.y = -145
-                                    notchy.layer.position.y = -145
-                                    titleLabel.removeFromSuperview()
-                                    notchy.removeFromSuperview()
-                                    imageView.removeFromSuperview()
-                                })
+                                titleLabel.layer.position.y = 50
+                                imageView.layer.position.y = 113
+                                descriptionLabel.layer.position.y = 70
+                                notchy.layer.position.y = 0
                             })
                         }
-                    } else {
-                        UIView.animate(withDuration: 0.3, animations: {
-                            titleLabel.layer.position.y = 50
-                            imageView.layer.position.y = 113
-                            descriptionLabel.layer.position.y = 70
-                            notchy.layer.position.y = 0
-                        })
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                        UIView.animate(withDuration: 0.2, animations: {
+                            titleLabel.layer.position.y = 55
+                            imageView.layer.position.y = 118
+                            descriptionLabel.layer.position.y = 75
+                            notchy.layer.position.y = 5
+                        }, completion: { (success) in
                             UIView.animate(withDuration: 0.3, animations: {
                                 titleLabel.layer.position.y = -145
                                 descriptionLabel.layer.position.y = -145
@@ -312,7 +292,26 @@ public class NotchyAlert {
                                 notchy.removeFromSuperview()
                                 imageView.removeFromSuperview()
                             })
-                        }
+                        })
+                    }
+                } else {
+                    UIView.animate(withDuration: 0.3, animations: {
+                        titleLabel.layer.position.y = 50
+                        imageView.layer.position.y = 113
+                        descriptionLabel.layer.position.y = 70
+                        notchy.layer.position.y = 0
+                    })
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                        UIView.animate(withDuration: 0.3, animations: {
+                            titleLabel.layer.position.y = -145
+                            descriptionLabel.layer.position.y = -145
+                            imageView.layer.position.y = -145
+                            notchy.layer.position.y = -145
+                            titleLabel.removeFromSuperview()
+                            notchy.removeFromSuperview()
+                            imageView.removeFromSuperview()
+                        })
                     }
                 }
             }
