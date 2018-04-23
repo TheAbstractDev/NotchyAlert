@@ -5,7 +5,7 @@ env:
   - IOS_FRAMEWORK_SCHEME="NotchyAlert"
   - IOS_PROJECT="Notchy.xcodeproj"
   - IOS_SDK=iphonesimulator11.0
-  - DESTINATION="platform=iOS Simulator, name=iPhone X" BUILD_EXAMPLE="NO" POD_LINT="NO"
+  - DESTINATION="platform=iOS Simulator,name=iPhone X" BUILD_EXAMPLE="NO" POD_LINT="NO"
 cache:
   directories:
   - Carthage
