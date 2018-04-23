@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3063D8F8208A207C00A0DE99"
+               BlueprintIdentifier = "309ABCB3208E184A006D3AF8"
                BuildableName = "NotchyAlert.framework"
                BlueprintName = "NotchyAlert"
-               ReferencedContainer = "container:Notchy.xcodeproj">
+               ReferencedContainer = "container:NotchyAlert.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3063D8F8208A207C00A0DE99"
+            BlueprintIdentifier = "309ABCB3208E184A006D3AF8"
             BuildableName = "NotchyAlert.framework"
             BlueprintName = "NotchyAlert"
-            ReferencedContainer = "container:Notchy.xcodeproj">
+            ReferencedContainer = "container:NotchyAlert.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3063D8F8208A207C00A0DE99"
+            BlueprintIdentifier = "309ABCB3208E184A006D3AF8"
             BuildableName = "NotchyAlert.framework"
             BlueprintName = "NotchyAlert"
-            ReferencedContainer = "container:Notchy.xcodeproj">
+            ReferencedContainer = "container:NotchyAlert.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

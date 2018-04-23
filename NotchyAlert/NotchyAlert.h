@@ -2,7 +2,7 @@
 //  NotchyAlert.h
 //  NotchyAlert
 //
-//  Created by Sofiane Beors on 20/04/2018.
+//  Created by Sofiane Beors on 23/04/2018.
 //  Copyright © 2018 Sofiane Beors. All rights reserved.
 //
 

@@ -113,7 +113,7 @@ public class NotchyAlert {
                     descriptionLabel.center = notchy.center
                     View.addSubview(descriptionLabel)
                     feedbackGenerator(force: .light)
-
+                    
                     if bounce != nil && bounce == true {
                         UIView.animate(withDuration: 0.3, animations: {
                             titleLabel.layer.position.y = 50
@@ -178,7 +178,7 @@ public class NotchyAlert {
                     imageView.center = notchy.center
                     View.addSubview(imageView)
                     feedbackGenerator(force: .light)
-
+                    
                     if bounce != nil && bounce == true {
                         UIView.animate(withDuration: 0.3, animations: {
                             notchy.layer.position.y = 0
@@ -253,7 +253,7 @@ public class NotchyAlert {
                     imageView.center = notchy.center
                     View.addSubview(imageView)
                     feedbackGenerator(force: .light)
-
+                    
                     if bounce != nil && bounce == true {
                         UIView.animate(withDuration: 0.3, animations: {
                             notchy.layer.position.y = 0
