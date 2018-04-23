@@ -1,7 +1,7 @@
 # NotchyAlert
 [![Cocoapods compatible](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat)](http://cocoapods.org)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)]()
+[![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](https://developer.apple.com/)
 [![License](https://img.shields.io/badge/license-MIT-999999.svg)](https://github.com/TheAbstractDev/NotchyAlert/blob/master/LICENSE)
 
 ![notchySimple](Screenshots/notchySimple.gif)
