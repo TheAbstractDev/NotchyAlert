@@ -6,7 +6,7 @@ env:
   - IOS_PROJECT="Notchy.xcodeproj"
   - IOS_SDK=iphonesimulator11.0
   matrix:
-   - DESTINATION="OS=11.0,name=iPhone X" SDK="$IOS_SDK" SCHEME="$IOS_FRAMEWORK_SCHEME" BUILD_EXAMPLE="NO" POD_LINT="NO"
+   - DESTINATION="OS=11.0,name=iPhone X" BUILD_EXAMPLE="NO" POD_LINT="NO"
 cache:
   directories:
   - Carthage
@@ -20,7 +20,7 @@ install: true
 script:
   - set -o pipefail
   - scripts/bootstrap-if-needed.sh
-  - xcodebuild -project "$IOS_PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty
+  - xcodebuild -project "$IOS_PROJECT" -scheme "$IOS_FRAMEWORK_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty
 notifications:
   email:
     recipients:
