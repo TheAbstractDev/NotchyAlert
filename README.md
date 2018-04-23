@@ -4,7 +4,8 @@
 [![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](https://developer.apple.com/)
 [![License](https://img.shields.io/badge/license-MIT-999999.svg)](https://github.com/TheAbstractDev/NotchyAlert/blob/master/LICENSE)
 
-## Requirements
+## Prerequisites
+- iOS 10.0 minimum
 - Xcode 9.x
 - Swift 4.x
 - iPhone X Simulator/Device
