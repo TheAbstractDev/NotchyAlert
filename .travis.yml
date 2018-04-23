@@ -18,7 +18,7 @@ before_install:
   - gem install xcpretty
 install: true
 script:
-  - xcodebuild -project "Notchy.xcodeproj" -scheme "NotchyAlert" -sdk "iphonesimulator11.0" -destination "name=iPhone X" -configuration Debug ONLY_ACTIVE_ARCH=NO build
+  - xcodebuild -project "Notchy.xcodeproj" -scheme "NotchyAlert" -sdk "iphonesimulator11.0" -destination "name=iPhone 6s" -configuration Debug ONLY_ACTIVE_ARCH=NO build
 notifications:
   email:
     recipients:
