@@ -5,7 +5,7 @@ env:
   - IOS_FRAMEWORK_SCHEME="NotchyAlert"
   - IOS_PROJECT="Notchy.xcodeproj"
   - IOS_SDK=iphonesimulator11.0
-  - DESTINATION="platform=iOS Simulator,name=iPhone X" BUILD_EXAMPLE="NO" POD_LINT="NO"
+  - DESTINATION="iOS Simulator,OS=11.0,name=iPhone X" BUILD_EXAMPLE="NO" POD_LINT="NO"
 cache:
   directories:
   - Carthage
@@ -18,7 +18,7 @@ before_install:
 install: true
 script:
   - set -o pipefail
-  - xcodebuild -project "$IOS_PROJECT" -scheme "$IOS_FRAMEWORK_SCHEME" -sdk "$IOS_SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty
+  - xcodebuild -project "$IOS_PROJECT" -scheme "$IOS_FRAMEWORK_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty
 notifications:
   email:
     recipients:
