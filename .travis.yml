@@ -19,7 +19,6 @@ before_install:
 install: true
 script:
   - set -o pipefail
-  - scripts/bootstrap-if-needed.sh
   - xcodebuild -project "$IOS_PROJECT" -scheme "$IOS_FRAMEWORK_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty
 notifications:
   email:
