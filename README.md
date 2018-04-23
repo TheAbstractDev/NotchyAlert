@@ -52,14 +52,14 @@ let notchy = Notchy(title: "Oops!", description: "No Internet Connection.", imag
 notchy.presentNotchy(in: self.view, duration: 3)
 ```
 
-#### Image Only
+#### Title and Image
 
 ```swift
 let notchy = Notchy(title: "Oops!", description: nil, image: "<YOUR IMAGE>)
 notchy.presentNotchy(in: self.view, duration: 3)
 ```
 
-#### Image and Decription
+#### Title, Decription and Image
 
 ```swift
 let notchy = Notchy(title: "Oops!", description: "No Internet Connection.", image: "<YOUR IMAGE>)
