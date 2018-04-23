@@ -74,7 +74,7 @@ notchy.presentNotchy(in: self.view, duration: 3, bounce: false)
 ```
 
 ## Example
-You can test it by downloading and run the Notchy project.
+You can test it by downloading and run the Example project.
 
 
 ## License
