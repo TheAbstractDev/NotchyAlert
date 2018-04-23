@@ -1,5 +1,8 @@
 # NotchyAlert
+![Cocoapods compatible](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)]()
+[![License](https://img.shields.io/badge/license-MIT-999999.svg)](https://github.com/TheAbstractDev/NotchyAlert/blob/master/LICENSE)
 
 ![notchySimple](Screenshots/notchySimple.gif)
 ![notchyWithDescription](Screenshots/notchyWithDescription.gif)
@@ -8,8 +11,14 @@
 
 ## Installation
 
-### Carthage
+### Cocoapods
+To install NotchyAlert using [Cocoapods](http://cocoapods.org), add the following line to your Podfile:
 
+```
+pod 'NotchyAlert'
+```
+
+### Carthage
 To install NotchyAlert using [Carthage](https://github.com/Carthage/Carthage), add the following line to your Cartfile:
 
 ```
@@ -53,3 +62,7 @@ notchy.presentNotchy(in: self.view, duration: 3)
 
 ## Example
 You can test it by downloading the project.
+
+
+## License
+NotchyAlert is available under the MIT license. See the LICENSE file for more info.
