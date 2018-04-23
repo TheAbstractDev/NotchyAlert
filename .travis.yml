@@ -7,7 +7,23 @@ env:
   - IOS_SDK=iphonesimulator11.0
   matrix:
    - DESTINATION="OS=11.0,name=iPhone X" SDK="$IOS_SDK" SCHEME="$IOS_FRAMEWORK_SCHEME" BUILD_EXAMPLE="NO" POD_LINT="NO"
+cache:
+  directories:
+  - Carthage
+before_install:
+  - curl -OlL "https://github.com/Carthage/Carthage/releases/download/0.18.1/Carthage.pkg"
+  - sudo installer -pkg "Carthage.pkg" -target /
+  - curl -L -O https://github.com/YPlan/CartfileDiff/releases/download/0.1/CartfileDiff.pkg
+  - sudo installer -pkg CartfileDiff.pkg -target /
+  - gem install xcpretty
+install: true
 script:
   - set -o pipefail
-  # Build Framework in ReleaseTest
-  - xcodebuild -project "$IOS_PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+  - scripts/bootstrap-if-needed.sh
+  - xcodebuild -project "$IOS_PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty
+notifications:
+  email:
+    recipients:
+      - theabstractdev@gmail.com
+    on_success: change
+    on_failure: always
