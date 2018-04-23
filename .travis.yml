@@ -3,18 +3,18 @@ osx_image: xcode9
 env:
   global:
   - IOS_FRAMEWORK_SCHEME="NotchyAlert"
-  - IOS_PROJECT="Notchy.xcodeproj"
+  - IOS_PROJECT="NotchyAlert.xcodeproj"
   - IOS_SDK=iphonesimulator11.0
   - DESTINATION="platform=iOS Simulator,OS=11.0,name=iPhone2017-C" BUILD_EXAMPLE="NO" POD_LINT="NO"
 before_install:
   - curl -OlL "https://github.com/Carthage/Carthage/releases/download/0.18.1/Carthage.pkg"
   - sudo installer -pkg "Carthage.pkg" -target /
-  # - gem install xcpretty
+  - gem install xcpretty
 install: true
 script:
   - set -o pipefail
   - xcrun instruments -w "*"
-  - xcodebuild -project "$IOS_PROJECT" -scheme "$IOS_FRAMEWORK_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build
+  - xcodebuild -project "$IOS_PROJECT" -scheme "$IOS_FRAMEWORK_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty
 notifications:
   email:
     recipients:
