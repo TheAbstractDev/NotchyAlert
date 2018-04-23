@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NotchyAlert
 
 class ViewController: UIViewController {
 
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func alertAction(_ sender: Any) {
-//        let notchy = NotchyAlrt(title: "Oops!", description: "No Internet Connection.", image: #imageLiteral(resourceName: "nocell"))
-//        notchy.presentNotchy(in: self.view, duration: 3)
+        let notchy = NotchyAlert(title: "Oops!", description: "No Internet Connection.", image: #imageLiteral(resourceName: "nocell"))
+        notchy.presentNotchy(in: self.view, duration: 3)
     }
 }
