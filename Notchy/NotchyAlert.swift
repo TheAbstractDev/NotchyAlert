@@ -14,12 +14,24 @@ public class NotchyAlert {
     var description: String?
     var image: UIImage?
     
+    /**
+     Defines the alert content.
+     - parameter title: The title of the alert.
+     - parameter description: Optional, the subtitle presented on the alert.
+     - parameter image: Optional, the image presented on the alert - Size: (50x50).
+     */
     public init(title: String, description: String?, image: UIImage?) {
         self.title = title
         if description != nil { self.description = description }
         if image != nil { self.image = image }
     }
     
+    /**
+     Presents the alert.
+     - parameter View: The view to be added.
+     - parameter duration: The duration of the presentation.
+     - parameter bounce: Optional, Used to enable or not the bounce effect.
+     */
     public func presentNotchy(in View: UIView, duration: TimeInterval, bounce: Bool? = true) {
         if UIDevice().userInterfaceIdiom == .phone && UIScreen.main.nativeBounds.height == 2436 {
             let notchy = UIView(frame: CGRect.zero)
@@ -41,6 +53,7 @@ public class NotchyAlert {
                 titleLabel.center = notchy.center
                 View.addSubview(notchy)
                 View.addSubview(titleLabel)
+                feedbackGenerator(force: .light)
                 
                 if bounce != nil && bounce == true {
                     UIView.animate(withDuration: 0.3, animations: {
@@ -99,7 +112,8 @@ public class NotchyAlert {
                     descriptionLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
                     descriptionLabel.center = notchy.center
                     View.addSubview(descriptionLabel)
-                    
+                    feedbackGenerator(force: .light)
+
                     if bounce != nil && bounce == true {
                         UIView.animate(withDuration: 0.3, animations: {
                             titleLabel.layer.position.y = 50
@@ -163,7 +177,8 @@ public class NotchyAlert {
                     imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
                     imageView.center = notchy.center
                     View.addSubview(imageView)
-                    
+                    feedbackGenerator(force: .light)
+
                     if bounce != nil && bounce == true {
                         UIView.animate(withDuration: 0.3, animations: {
                             notchy.layer.position.y = 0
@@ -237,7 +252,8 @@ public class NotchyAlert {
                     imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
                     imageView.center = notchy.center
                     View.addSubview(imageView)
-                    
+                    feedbackGenerator(force: .light)
+
                     if bounce != nil && bounce == true {
                         UIView.animate(withDuration: 0.3, animations: {
                             notchy.layer.position.y = 0
@@ -302,6 +318,18 @@ public class NotchyAlert {
             } else {
                 print("Notchy only works with the iPhone X !")
             }
+        }
+    }
+    
+    /**
+     Generate an haptic feedback (available on iOS 10.0 and later)
+     
+     - parameter force: the intensity of the haptic feedback
+     */
+    public func feedbackGenerator(force: UIImpactFeedbackStyle) {
+        if #available(iOS 10.0, *) {
+            let generator = UIImpactFeedbackGenerator(style: force)
+            generator.impactOccurred()
         }
     }
 }
