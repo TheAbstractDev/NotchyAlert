@@ -5,8 +5,8 @@
 [![License](https://img.shields.io/badge/license-MIT-999999.svg)](https://github.com/TheAbstractDev/NotchyAlert/blob/master/LICENSE)
 
 ## Requirements
-- Xcode 9
-- Swift 4
+- Xcode 9.x
+- Swift 4.x
 - iPhone X Simulator/Device
 
 ## Demo
