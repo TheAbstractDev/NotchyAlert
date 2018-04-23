@@ -6,7 +6,7 @@ env:
   - IOS_PROJECT="Notchy.xcodeproj"
   - IOS_SDK=iphonesimulator11.0
   matrix:
-   - DESTINATION="OS=11.0,name=iPhone2017-C" BUILD_EXAMPLE="NO" POD_LINT="NO"
+   - DESTINATION="OS=11.0,name=iPhone6s" BUILD_EXAMPLE="NO" POD_LINT="NO"
 cache:
   directories:
   - Carthage
