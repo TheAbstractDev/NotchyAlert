@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonAction(_ sender: Any) {
-        let notchy = NotchyAlert(title: "Oops!", description: "No internet Connection.", image: #imageLiteral(resourceName: "nocell"))
-        notchy.presentNotchy(in: self.view, duration: 3)
+        let N = NotchyAlert(title: "Oops!", description: "No Internet Connection", image: #imageLiteral(resourceName: "nocell"))
+        N.presentNotchy(in: self.view, duration: 3)
     }
     
 }
