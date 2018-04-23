@@ -4,6 +4,12 @@
 [![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](https://developer.apple.com/)
 [![License](https://img.shields.io/badge/license-MIT-999999.svg)](https://github.com/TheAbstractDev/NotchyAlert/blob/master/LICENSE)
 
+## Requirements
+- Xcode 9
+- Swift 4
+- iPhone X Simulator/Device
+
+## Demo
 ![notchySimple](Screenshots/notchySimple.gif)
 ![notchyWithDescription](Screenshots/notchyWithDescription.gif)
 ![notchyWithImage](Screenshots/notchyWithImage.gif)
@@ -25,7 +31,7 @@ To install NotchyAlert using [Carthage](https://github.com/Carthage/Carthage), a
 github "TheAbstractDev/NotchyAlert"
 ```
 
-### Usage
+## Usage
 First, you'll need to import NotchyAlert
 
 ```swift
