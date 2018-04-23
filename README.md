@@ -60,8 +60,15 @@ let notchy = Notchy(title: "Oops!", description: "No Internet Connection.", imag
 notchy.presentNotchy(in: self.view, duration: 3)
 ```
 
+### Bounce Effect
+By default, the bounce effect is true.
+You can choose to disable the bounce effect by setting false on the call of `presentNotchy`
+```swift
+notchy.presentNotchy(in: self.view, duration: 3, bounce: false)
+```
+
 ## Example
-You can test it by downloading the project.
+You can test it by downloading and run the Notchy project.
 
 
 ## License
