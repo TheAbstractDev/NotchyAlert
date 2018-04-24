@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func alertAction(_ sender: Any) {
-        let notchy = NotchyAlert(title: "Oops!", description: "No Internet Connection.", image: #imageLiteral(resourceName: "nocell"))
+        let notchy = NotchyAlert(title: "Success!", description: "Added to favorites.", image: #imageLiteral(resourceName: "successIcon"))
         notchy.presentNotchy(in: self.view, duration: 3)
     }
 }

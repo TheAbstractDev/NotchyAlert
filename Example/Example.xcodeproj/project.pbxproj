@@ -12,8 +12,8 @@
 		309ABCD3208E1BDD006D3AF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309ABCD1208E1BDD006D3AF8 /* Main.storyboard */; };
 		309ABCD5208E1BF3006D3AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309ABCD4208E1BF3006D3AF8 /* Assets.xcassets */; };
 		309ABCD8208E1BF3006D3AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309ABCD6208E1BF3006D3AF8 /* LaunchScreen.storyboard */; };
-		309ABCE6208E1D4F006D3AF8 /* NotchyAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309ABCE5208E1D4F006D3AF8 /* NotchyAlert.framework */; };
-		309ABCE7208E1D4F006D3AF8 /* NotchyAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 309ABCE5208E1D4F006D3AF8 /* NotchyAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30D07D4E208F14BB00F4BD16 /* NotchyAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D07D4D208F14BB00F4BD16 /* NotchyAlert.framework */; };
+		30D07D4F208F14BB00F4BD16 /* NotchyAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30D07D4D208F14BB00F4BD16 /* NotchyAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				309ABCE7208E1D4F006D3AF8 /* NotchyAlert.framework in Embed Frameworks */,
+				30D07D4F208F14BB00F4BD16 /* NotchyAlert.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +38,7 @@
 		309ABCD4208E1BF3006D3AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		309ABCD7208E1BF3006D3AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		309ABCD9208E1BF3006D3AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		309ABCE5208E1D4F006D3AF8 /* NotchyAlert.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotchyAlert.framework; path = Carthage/Build/iOS/NotchyAlert.framework; sourceTree = "<group>"; };
+		30D07D4D208F14BB00F4BD16 /* NotchyAlert.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NotchyAlert.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				309ABCE6208E1D4F006D3AF8 /* NotchyAlert.framework in Frameworks */,
+				30D07D4E208F14BB00F4BD16 /* NotchyAlert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 		309ABCC1208E1BDD006D3AF8 = {
 			isa = PBXGroup;
 			children = (
-				309ABCE5208E1D4F006D3AF8 /* NotchyAlert.framework */,
+				30D07D4D208F14BB00F4BD16 /* NotchyAlert.framework */,
 				309ABCCC208E1BDD006D3AF8 /* Example */,
 				309ABCCB208E1BDD006D3AF8 /* Products */,
 			);
@@ -305,6 +305,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -328,6 +329,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

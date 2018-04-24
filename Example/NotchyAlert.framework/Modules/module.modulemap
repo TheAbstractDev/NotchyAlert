@@ -1,0 +1,11 @@
+framework module NotchyAlert {
+  umbrella header "NotchyAlert.h"
+
+  export *
+  module * { export * }
+}
+
+module NotchyAlert.Swift {
+    header "NotchyAlert-Swift.h"
+    requires objc
+}
