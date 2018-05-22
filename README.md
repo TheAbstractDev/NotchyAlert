@@ -3,6 +3,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](https://developer.apple.com/)
 [![License](https://img.shields.io/badge/license-MIT-999999.svg)](https://github.com/TheAbstractDev/NotchyAlert/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/TheAbstractDev/NotchyAlert.svg?branch=master)](https://travis-ci.org)
 
 ![](Screenshots/banner.png)
 
