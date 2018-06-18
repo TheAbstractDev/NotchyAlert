@@ -14,9 +14,3 @@ install: true
 script:
   - set -o pipefail
   - xcodebuild -project "$PROJECT" -scheme "$FRAMEWORK_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty
-notifications:
-  email:
-    recipients:
-      - theabstractdev@gmail.com
-    on_success: change
-    on_failure: always
