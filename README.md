@@ -14,10 +14,12 @@
 
 ## Demo
 
+<p float="left">
 <img src="https://github.com/ivanvorobei/NotchyAlert/blob/master/Screenshots/notchySimple.gif" width="250">
 <img src="https://github.com/ivanvorobei/NotchyAlert/blob/master/Screenshots/notchyWithDescription.gif" width="250">
 <img src="https://github.com/ivanvorobei/NotchyAlert/blob/master/Screenshots/notchyWithImage.gif" width="250">
 <img src="https://github.com/ivanvorobei/NotchyAlert/blob/master/Screenshots/otchyWithDescImage.gif" width="250">
+</p>
 
 ## Installation
 
