@@ -13,10 +13,11 @@
 - iPhone X Simulator/Device
 
 ## Demo
-![notchySimple](Screenshots/notchySimple.gif)
-![notchyWithDescription](Screenshots/notchyWithDescription.gif)
-![notchyWithImage](Screenshots/notchyWithImage.gif)
-![notchyWithDescImage](Screenshots/notchyWithDescImage.gif)
+
+<img src="https://github.com/ivanvorobei/NotchyAlert/blob/master/Screenshots/notchySimple.gif" width="250">
+<img src="https://github.com/ivanvorobei/NotchyAlert/blob/master/Screenshots/notchyWithDescription.gif" width="250">
+<img src="https://github.com/ivanvorobei/NotchyAlert/blob/master/Screenshots/notchyWithImage.gif" width="250">
+<img src="https://github.com/ivanvorobei/NotchyAlert/blob/master/Screenshots/otchyWithDescImage.gif" width="250">
 
 ## Installation
 
